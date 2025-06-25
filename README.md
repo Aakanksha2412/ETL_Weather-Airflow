@@ -25,12 +25,20 @@ Start Airflow on your local machine by running 'astro dev start'.
 This command will spin up five Docker containers on your machine, each for a different Airflow component:
 
 - Postgres: Airflow's Metadata Database
+<img width="1470" alt="Postgres" src="https://github.com/user-attachments/assets/18f057ec-f847-4b27-bcf4-2b2bfda70555" />
+
 - Scheduler: The Airflow component responsible for monitoring and triggering tasks
 - DAG Processor: The Airflow component responsible for parsing DAGs
+<img width="1470" alt="Airflow" src="https://github.com/user-attachments/assets/20e8b843-1159-4bed-a92c-bff3c3a073af" />
+<img width="1470" alt="Graph" src="https://github.com/user-attachments/assets/a29b0e71-dbb1-4570-bf8b-ff31ab7fade7" />
+
+
 - API Server: The Airflow component responsible for serving the Airflow UI and API
 - Triggerer: The Airflow component responsible for triggering deferred tasks
 
 When all five containers are ready the command will open the browser to the Airflow UI at http://localhost:8080/. You should also be able to access your Postgres Database at 'localhost:5432/postgres' with username 'postgres' and password 'postgres'.
+<img width="1470" alt="Docker" src="https://github.com/user-attachments/assets/b556fe85-89b4-43c3-a387-a1d679f2711a" />
+
 
 Note: If you already have either of the above ports allocated, you can either [stop your existing Docker containers or change the port](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver).
 
